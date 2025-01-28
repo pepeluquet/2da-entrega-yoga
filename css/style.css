@@ -1,0 +1,407 @@
+/* orden en CCS */
+/* Reset de CCS
+Familia tipografia
+Tamaño de tipografia
+box-model
+*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans", serif;
+    font-size: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: 0.6fr 1fr 0.1fr 0.01fr;
+    grid-template-areas: 
+            "cabeza  cabeza  cabeza"
+            "cuerpo  cuerpo  cuerpo"
+            "cuerpo  cuerpo  cuerpo"
+            " pie     pie     pie"    
+    ;
+}
+
+body {
+    background-color: #E5E6E7;
+}
+
+.cabeza {
+    grid-area: cabeza;
+}
+
+.cabeza .menu {
+    position: sticky;
+    top: 0.1em;
+}
+
+.cabeza .menu {
+    display: flex;
+    justify-content: space-around; 
+    height: 2.5rem;
+    align-items: center;
+    background-color: #BB6A24;
+}
+
+.cabeza .menu .navegacion ul {
+    display: flex;
+    list-style: none;
+    flex-basis: auto;
+}
+.cabeza .menu .navegacion li{
+    padding: 1.5em;
+}
+.cabeza .menu .navegacion li a {
+    color: #f5f5dc;
+    text-decoration:overline;
+}
+.cabeza .menu .logo {
+    height: 2.5em;
+}
+.cabeza .menu .navegacion ul a {
+    color: #f5f5dc;
+    text-decoration:overline;
+}
+
+.cabeza .titulo {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8e1ce;
+    text-align: center;
+    background-image: url(../assets/foto1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 30em;
+}
+
+.cabeza .titulo-info {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8e1ce;
+    text-align: center;
+    background-image: url(../assets/foto7.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 30em;
+}
+.cabeza .titulo-blog {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8e1ce;
+    text-align: center;
+    background-image: url(../assets/foto5.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 30em;
+}
+.cabeza .titulo-contacto {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8e1ce;
+    text-align: center;
+    background-image: url(../assets/foto6.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 30em;
+}
+
+.cabeza .titulo h1 {
+    color: #483d8b;
+    font-size: 2.3em
+}
+.cabeza .titulo-info h1 {
+    color: #483d8b;
+    font-size: 2.3em
+}
+.cabeza .titulo-blog h1 {
+    color: #483d8b;
+    font-size: 2.3em
+}
+.cabeza .titulo-contacto h1 {
+    color: #483d8b;
+    font-size: 2.3em
+}
+
+.cabeza .titulo h3 {
+    color: #2A2A24;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 1em;
+    font-size: 1.2em; 
+}
+.cabeza .titulo-info h3 {
+    color: #2A2A24;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 1em;
+    font-size: 1.2em; 
+}
+.cabeza .titulo-blog h3 {
+    color: #2A2A24;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 1em;
+    font-size: 1.2em; 
+}
+
+.cuerpo {
+    display: flex;
+    flex-direction: column;
+    grid-area: cuerpo;
+}
+
+.cuerpo .subtitulos {
+    color: #2A2A24;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 2.2em;
+    font-size: 1.5em;
+}
+
+.cuerpo .articulos-lectura {   
+    background-color: #DDA15E;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+/* .cuerpo .articulos-lectura .row .col{
+    display: inline-flex;
+  } */
+
+/* .cuerpo .articulos-lectura .articulo {
+    background-color: #f8e1ce;
+    margin: 0.2em;
+    border: 0.3em solid #827F7B;
+    border-radius: 0.5em;
+    width: 25%;
+} */
+
+/* .cuerpo .articulos-lectura .articulo img {
+    width: 100%;
+} */
+
+
+.cuerpo .articulos-lectura {
+    display:flex;
+    flex-direction: row;
+}
+.cuerpo .articulos-lectura .articulo-info {
+    background-color: #f8e1ce;
+    /* margin: 0.3em;
+    border: 0.4em solid #827F7B; */
+    border-radius: 0.5em;
+}
+.cuerpo .carousel {
+    flex-grow: 4;
+    background-color: #f8e1ce;
+    background-position: center;
+    /* margin: 1em; */
+    border-radius: 0.5em;
+}
+
+/* .cuerpo .articulos-lectura .articulo-blog1 {
+    width: 33%;
+    text-align: center;
+    background-image: url(../assets/foto14.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 28em;
+} */
+/* .cuerpo .articulos-lectura .articulo-blog2 {
+    width: 33%;
+    text-align: center;   
+    background-image: url(../assets/foto13.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 28em;
+} */
+/* .cuerpo .articulos-lectura .articulo-blog3 {
+    width: 33%;
+    text-align: center;   
+    background-image: url(../assets/foto12.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 28em;
+} */
+/* .cuerpo .articulos-lectura .articulo-blog4 {
+    width: 33%;
+    text-align: center;   
+    background-image: url(../assets/foto11.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 28em;
+} */
+/* .cuerpo .articulos-lectura .articulo-blog5 {
+    width: 33%;
+    text-align: center;   
+    background-image: url(../assets/foto10.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 28em;
+} */
+/* .cuerpo .articulos-lectura .articulo-blog6 {
+    width: 33%;
+    text-align: center;   
+    background-image: url(../assets/foto9.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 28em;
+} */
+
+.cuerpo .articulos-videos {   
+    background-color: #DDA15E;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+/* .cuerpo .articulos-videos {
+    display: inline-flex;
+    justify-content: center;
+    background-color: #DDA15E;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.cuerpo .articulos-videos .articulo {
+    background-color: #f8e1ce;
+    margin: 0.5em;
+    border: 0.3em solid #827F7B;
+    border-radius: 0.5em;
+} */
+
+.cuerpo .formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around ;
+    align-items: flex-start;
+
+    background-color: #DDA15E;
+
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.cuerpo .formulario .comun {
+    /* flex-grow: 10; */
+    width: 28%;
+}
+.cuerpo .formulario .largo {
+    /* flex-grow: 10; */
+    width: 95%;
+}
+
+/* .cuerpo .articulos-lectura .articulo img {
+    width: 100%;
+} */
+
+
+.pie {
+    grid-area: pie;
+}
+
+.menu-pie {
+    display: flex;
+    justify-content: space-around; 
+    height: 2.5rem;
+    align-items: center;
+    background-color: #BB6A24;
+}
+
+.menu-pie .redes {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;  
+}
+
+.menu-pie .redes li {
+    padding: 1.0em;
+}
+
+.menu-pie .redes li a {
+    text-decoration: none;
+    color: #f5f5dc;
+}
+
+.menu-pie a {
+    text-decoration: none;
+    color: #f5f5dc;
+}
+
+.menu-pie .logo{
+    height: 2.5em ;
+}
+
+.menu-pie .link {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;  
+}
+
+.menu-pie .link li {
+    padding: 1.0em;
+}
+
+.menu-pie .link li a {
+    text-decoration: none;
+    color: #f5f5dc;
+}
+
+.registro {
+    background-color: #BB6A24;
+}
+
+
+/* desktop a mobile */
+/* tablet 768px */
+/* Mobile 480px*/
+
+@media (max-width: 768px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 0.2fr 1fr 0.5fr 0.04fr;
+        grid-template-areas: 
+        "cabeza cabeza "
+        "cuerpo cuerpo"
+        "cuerpo cuerpo"
+        " pie   pie  "   
+        ;
+    }
+    .cuerpo .articulos-lectura {
+        display: inline-block;
+        background-color: #7a5edd;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .cuerpo .articulos-lectura .articulo {
+        width: 80%;
+    }
+    .cuerpo .articulos-videos .articulo {
+        width: 80%;
+    }
+}
+@media (max-width: 480px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 0.5fr 0.02fr;
+        grid-template-areas: 
+        "cabeza "
+        "cuerpo "
+        "cuerpo "
+        " pie   "   
+        ;
+    }
+    .cuerpo .articulos-lectura {
+        display: inline-block;
+        background-color: #5a2efc;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .cuerpo .articulos-lectura .articulo {
+        width: 80%;
+    }
+    .cuerpo .articulos-videos .articulo {
+        width: 80%;
+    }
+}
