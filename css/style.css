@@ -11,20 +11,23 @@ box-model
     font-size: 20px;
 }
 
+
+body {
+    background-color: #E5E6E7;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr) ;
-    grid-template-rows: 0.6fr 1fr 0.1fr 0.01fr;
+    grid-template-rows: 0.3fr 1fr 0.1fr 0.01fr;
     grid-template-areas: 
             "cabeza  cabeza  cabeza"
             "cuerpo  cuerpo  cuerpo"
             "cuerpo  cuerpo  cuerpo"
             " pie     pie     pie"    
     ;
-}
-
-body {
-    background-color: #E5E6E7;
 }
 
 .cabeza {
@@ -164,109 +167,58 @@ body {
     padding-top: 2em;
     padding-bottom: 2em;
 }
-/* .cuerpo .articulos-lectura .row .col{
-    display: inline-flex;
-  } */
-
-/* .cuerpo .articulos-lectura .articulo {
-    background-color: #f8e1ce;
-    margin: 0.2em;
-    border: 0.3em solid #827F7B;
-    border-radius: 0.5em;
-    width: 25%;
-} */
-
-/* .cuerpo .articulos-lectura .articulo img {
-    width: 100%;
-} */
-
 
 .cuerpo .articulos-lectura {
-    display:flex;
+    display:inline-flex;
     flex-direction: row;
-}
-.cuerpo .articulos-lectura .articulo-info {
-    background-color: #f8e1ce;
-    /* margin: 0.3em;
-    border: 0.4em solid #827F7B; */
-    border-radius: 0.5em;
-}
-.cuerpo .carousel {
-    flex-grow: 4;
-    background-color: #f8e1ce;
-    background-position: center;
-    /* margin: 1em; */
-    border-radius: 0.5em;
+
+    align-items: center;
 }
 
-/* .cuerpo .articulos-lectura .articulo-blog1 {
-    width: 33%;
-    text-align: center;
-    background-image: url(../assets/foto14.jpg);
+
+.cuerpo .articulos-lectura .articulo-info {
+    background-color: #f8e1ce;
+    border-radius: 0.5em;
+}
+.cuerpo .articulos-lectura .parrafo-info {
+    width: 100%;
+    align-items: center;
+    padding: 2em;
+    margin: 2em;
+    font-size: 1.2em;
+}
+
+.cuerpo .carousel {
+    background-color: #f8e1ce;
     background-position: center;
-    background-size: cover;
-    height: 28em;
-} */
-/* .cuerpo .articulos-lectura .articulo-blog2 {
-    width: 33%;
-    text-align: center;   
-    background-image: url(../assets/foto13.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 28em;
-} */
-/* .cuerpo .articulos-lectura .articulo-blog3 {
-    width: 33%;
-    text-align: center;   
-    background-image: url(../assets/foto12.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 28em;
-} */
-/* .cuerpo .articulos-lectura .articulo-blog4 {
-    width: 33%;
-    text-align: center;   
-    background-image: url(../assets/foto11.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 28em;
-} */
-/* .cuerpo .articulos-lectura .articulo-blog5 {
-    width: 33%;
-    text-align: center;   
-    background-image: url(../assets/foto10.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 28em;
-} */
-/* .cuerpo .articulos-lectura .articulo-blog6 {
-    width: 33%;
-    text-align: center;   
-    background-image: url(../assets/foto9.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 28em;
-} */
+    border-radius: 0.5em;
+    margin: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
 
 .cuerpo .articulos-videos {   
     background-color: #DDA15E;
     padding-top: 2em;
     padding-bottom: 2em;
 }
-/* .cuerpo .articulos-videos {
-    display: inline-flex;
-    justify-content: center;
-    background-color: #DDA15E;
-    padding-top: 2em;
-    padding-bottom: 2em;
-}
 
-.cuerpo .articulos-videos .articulo {
-    background-color: #f8e1ce;
-    margin: 0.5em;
-    border: 0.3em solid #827F7B;
-    border-radius: 0.5em;
-} */
+.cuerpo .articulos-lectura-blog {
+    display:inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #DDA15E;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
+.cuerpo .articulos-lectura-blog .card{
+    margin-left: 1em;
+    margin-right: 1em;
+}
 
 .cuerpo .formulario {
     display: flex;
@@ -281,18 +233,14 @@ body {
 }
 
 .cuerpo .formulario .comun {
-    /* flex-grow: 10; */
+    width: 28%;
+}
+.cuerpo .formulario .email {
     width: 28%;
 }
 .cuerpo .formulario .largo {
-    /* flex-grow: 10; */
     width: 95%;
 }
-
-/* .cuerpo .articulos-lectura .articulo img {
-    width: 100%;
-} */
-
 
 .pie {
     grid-area: pie;
@@ -357,7 +305,7 @@ body {
 @media (max-width: 768px){
     .grid-container {
         display: grid;
-        grid-template-columns: 2fr;
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 0.2fr 1fr 0.5fr 0.04fr;
         grid-template-areas: 
         "cabeza cabeza "
@@ -372,11 +320,33 @@ body {
         padding-left: 2em;
         padding-right: 2em;
     }
+    .cabeza .titulo h3 {
+        padding: 0.8em;
+        font-size: 1em; 
+    }
+    .cabeza .titulo-info h3 {
+        padding: 0.8em;
+        font-size: 1em;  
+    }
+    .cabeza .titulo-blog h3 {
+        padding: 0.8em;
+        font-size: 1em;  
+    }
     .cuerpo .articulos-lectura .articulo {
         width: 80%;
     }
     .cuerpo .articulos-videos .articulo {
         width: 80%;
+    }
+
+    .cuerpo .formulario .comun {
+        width: 40%;
+    }
+    .cuerpo .formulario .email {
+        width: 95%;
+    }
+    .cuerpo .formulario .largo {
+        width: 95%;
     }
 }
 @media (max-width: 480px){
@@ -394,14 +364,47 @@ body {
     .cuerpo .articulos-lectura {
         display: inline-block;
         background-color: #5a2efc;
-        padding-left: 2em;
-        padding-right: 2em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+    .cabeza .titulo h3 {
+        padding: 0.5em;
+        font-size: 1em; 
+    }
+    .cabeza .titulo-info h3 {
+        padding: 0.5em;
+        font-size: 0.6em;  
+    }
+    .cabeza .titulo-blog h3 {
+        padding: 0.8em;
+        font-size: 0.6em;  
     }
 
     .cuerpo .articulos-lectura .articulo {
-        width: 80%;
+        width: 65%;
     }
     .cuerpo .articulos-videos .articulo {
-        width: 80%;
+        width: 65%;
+    }
+    .cuerpo .formulario {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-around ;
+        align-items: flex-start;
+    
+        background-color: #DDA15E;
+    
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    
+    .cuerpo .formulario .comun {
+        width: 95%;
+    }
+    .cuerpo .formulario .email {
+        width: 95%;
+    }
+    .cuerpo .formulario .largo {
+        width: 95%;
     }
 }
